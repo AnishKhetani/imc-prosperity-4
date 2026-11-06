@@ -1,0 +1,27 @@
+
+*** LIVE-SIM MODE *** (day 3, TTE=5, match=all)
+  Algorithm : submissionr4.py
+  Match     : all
+  Days      : [3]
+
+--- Day 3 (TTE=5d, match=all) ---
+Backtesting .\tmpac4ja7a4.py on round 4 day 3
+HYDROGEL_PACK: 48,268
+VELVETFRUIT_EXTRACT: 24,679
+VEV_4000: 310
+VEV_4500: 29
+VEV_5000: 28
+VEV_5100: -47
+VEV_5200: 0
+VEV_5300: 265
+VEV_5400: -474
+VEV_5500: -34
+VEV_6000: 0
+VEV_6500: 0
+Total profit: 73,023
+
+Successfully saved backtest results to backtests\2026-04-26_16-17-03.log
+
+
+=== R4 PNL SUMMARY ===
+  Day 3:     73,023

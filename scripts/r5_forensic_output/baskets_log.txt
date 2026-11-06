@@ -1,0 +1,81 @@
+==========================================================================================
+SNACKPACK basket structure
+==========================================================================================
+
+Individual mid means:
+  SNACKPACK_CHOCOLATE                                 mean=   +9843.372  std=  200.730  min=   +9268.000  max=  +10315.500
+  SNACKPACK_PISTACHIO                                 mean=   +9495.844  std=  187.492  min=   +9012.500  max=  +10106.500
+  SNACKPACK_RASPBERRY                                 mean=  +10077.812  std=  169.811  min=   +9682.500  max=  +10647.000
+  SNACKPACK_STRAWBERRY                                mean=  +10706.609  std=  363.567  min=   +9554.000  max=  +11391.500
+  SNACKPACK_VANILLA                                   mean=  +10097.302  std=  178.512  min=   +9675.500  max=  +10563.000
+
+Sum / mean of all 5:
+  sum_all_5                                           mean=  +50220.939  std=  189.576  min=  +49706.000  max=  +50625.500
+  mean_all_5                                          mean=  +10044.188  std=   37.915  min=   +9941.200  max=  +10125.100
+
+Pairwise sums / means (high |corr| pairs):
+  sum  SNACKPACK_RASPBERRY+SNACKPACK_STRAWBERRY       mean=  +20784.421  std=  331.581  min=  +19988.000  max=  +21275.500
+  diff SNACKPACK_RASPBERRY-SNACKPACK_STRAWBERRY       mean=    -628.796  std=  460.530  min=   -1661.500  max=   +1093.000
+  sum  SNACKPACK_CHOCOLATE+SNACKPACK_VANILLA          mean=  +19940.674  std=   76.197  min=  +19767.000  max=  +20109.000
+  diff SNACKPACK_CHOCOLATE-SNACKPACK_VANILLA          mean=    -253.931  std=  372.172  min=   -1291.000  max=    +638.000
+  sum  SNACKPACK_PISTACHIO+SNACKPACK_STRAWBERRY       mean=  +20202.452  std=  327.383  min=  +19001.000  max=  +20986.000
+  diff SNACKPACK_PISTACHIO-SNACKPACK_STRAWBERRY       mean=   -1210.765  std=  476.958  min=   -1857.500  max=     +42.000
+  sum  SNACKPACK_PISTACHIO+SNACKPACK_RASPBERRY        mean=  +19573.656  std=  179.774  min=  +19213.500  max=  +20109.500
+  diff SNACKPACK_PISTACHIO-SNACKPACK_RASPBERRY        mean=    -581.968  std=  309.288  min=   -1436.000  max=    +397.500
+
+Least-squares decomposition: each product ~ alpha + sum b_i * other_i
+  rows usable: 30000
+  SNACKPACK_CHOCOLATE       R2=0.9484  alpha=+19500.96  betas=['+0.112', '+0.011', '-0.142', '-0.922']  resid_std=45.612
+  SNACKPACK_PISTACHIO       R2=0.7701  alpha=+13853.27  betas=['+0.435', '-0.852', '-0.307', '+0.320']  resid_std=89.905
+  SNACKPACK_RASPBERRY       R2=0.7456  alpha=+20719.31  betas=['+0.040', '-0.773', '-0.360', '+0.016']  resid_std=85.658
+  SNACKPACK_STRAWBERRY      R2=0.7988  alpha=+67692.39  betas=['-1.820', '-1.009', '-1.303', '-1.620']  resid_std=163.084
+  SNACKPACK_VANILLA         R2=0.9294  alpha=+20483.25  betas=['-0.997', '+0.089', '+0.005', '-0.137']  resid_std=47.427
+
+Full 5-way OLS: best 2-other regressions per target:
+  target=SNACKPACK_CHOCOLATE      r2=0.9412 combo=(SNACKPACK_STRAWBERRY,SNACKPACK_VANILLA) alpha=+21166.62 b1=-0.167 b2=-0.944 resid_std=48.678
+  target=SNACKPACK_PISTACHIO      r2=0.7523 combo=(SNACKPACK_RASPBERRY,SNACKPACK_STRAWBERRY) alpha=+22931.29 b1=-0.906 b2=-0.402 resid_std=93.315
+  target=SNACKPACK_RASPBERRY      r2=0.7450 combo=(SNACKPACK_PISTACHIO,SNACKPACK_STRAWBERRY) alpha=+21269.59 b1=-0.765 b2=-0.367 resid_std=85.745
+  target=SNACKPACK_STRAWBERRY     r2=0.7272 combo=(SNACKPACK_PISTACHIO,SNACKPACK_RASPBERRY) alpha=+44683.48 b1=-1.667 b2=-1.801 resid_std=189.898
+  target=SNACKPACK_VANILLA        r2=0.9236 combo=(SNACKPACK_CHOCOLATE,SNACKPACK_STRAWBERRY) alpha=+21262.58 b1=-0.971 b2=-0.150 resid_std=49.350
+
+Integer-combination 'is this constant?' hypothesis tests:
+  CHOC+VAN                                            mean=  +19940.674  std=   76.197  min=  +19767.000  max=  +20109.000
+  CHOC-VAN                                            mean=    -253.931  std=  372.172  min=   -1291.000  max=    +638.000
+  RASP+STRAW                                          mean=  +20784.421  std=  331.581  min=  +19988.000  max=  +21275.500
+  ALL_5_SUM                                           mean=  +50220.939  std=  189.576  min=  +49706.000  max=  +50625.500
+
+PISTACHIO vs (STRAWBERRY - RASPBERRY):
+  pistachio = +9538.07 + -0.0672 * (straw - rasp)   R2=0.0272  resid_std=184.924
+
+==========================================================================================
+ROBOT — strong tick mean reversion candidates
+==========================================================================================
+  ROBOT_DISHES        ret_std=17.779  flip_rate=0.513  spread_med=7.0  abs_ret_med=4.00
+  ROBOT_IRONING       ret_std=10.443  flip_rate=0.578  spread_med=6.0  abs_ret_med=10.00
+  ROBOT_LAUNDRY       ret_std=9.822  flip_rate=0.498  spread_med=7.0  abs_ret_med=6.50
+  ROBOT_MOPPING       ret_std=11.145  flip_rate=0.502  spread_med=8.0  abs_ret_med=7.50
+  ROBOT_VACUUMING     ret_std=9.236  flip_rate=0.505  spread_med=7.0  abs_ret_med=6.00
+
+==========================================================================================
+OXYGEN_SHAKE — heavy-tail returns inspection
+==========================================================================================
+  OXYGEN_SHAKE_CHOCOLATE         kurt=15.84 pct_>5sigma=0.237% max_jump=103.5
+  OXYGEN_SHAKE_EVENING_BREATH    kurt=14.20 pct_>5sigma=0.220% max_jump=100.0
+  OXYGEN_SHAKE_GARLIC            kurt=0.05 pct_>5sigma=0.000% max_jump=48.0
+  OXYGEN_SHAKE_MINT              kurt=-0.03 pct_>5sigma=0.000% max_jump=42.0
+  OXYGEN_SHAKE_MORNING_BREATH    kurt=0.07 pct_>5sigma=0.000% max_jump=40.0
+
+==========================================================================================
+PEBBLES — size hierarchy break (L < M on average)
+==========================================================================================
+  PEBBLES_XS   day-mean: d2=  9189.4  d3=  6968.4  d4=  6056.1  
+  PEBBLES_S    day-mean: d2=  9650.5  d3=  9197.5  d4=  7949.1  
+  PEBBLES_M    day-mean: d2=  9747.4  d3= 10170.5  d4= 10871.8  
+  PEBBLES_L    day-mean: d2=  9862.8  d3= 10201.5  d4= 10458.1  
+  PEBBLES_XL   day-mean: d2= 11549.8  d3= 13462.1  d4= 14664.9  
+  PEBBLES_L - PEBBLES_M                               mean=     -89.133  std=  757.129  min=   -2503.000  max=   +1841.000
+  level corr(L,M)=0.3354  return corr(L,M)=0.0108
+
+PEBBLES_XL ~ basket of others (OLS):
+  XL = +49999.94 + -1.000*XS + -1.000*S + -1.000*M + -1.000*L   R2=1.0000  resid_std=2.798
+  sum_all_5_PEBBLES                                   mean=  +49999.940  std=    2.798  min=  +49981.500  max=  +50016.500

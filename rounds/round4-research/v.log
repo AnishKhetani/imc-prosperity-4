@@ -1,0 +1,64 @@
+  Algorithm : submissionr4.py
+  Match     : worse
+  Days      : [1, 2, 3]
+
+--- Day 1 (TTE=7d, match=worse) ---
+Backtesting .\tmpb00wypbx.py on round 4 day 1
+HYDROGEL_PACK: 29,719
+VELVETFRUIT_EXTRACT: 33,088
+VEV_4000: 675
+VEV_4500: 0
+VEV_5000: 0
+VEV_5100: 348
+VEV_5200: 0
+VEV_5300: -235
+VEV_5400: 29
+VEV_5500: 0
+VEV_6000: 0
+VEV_6500: 0
+Total profit: 63,624
+
+Successfully saved backtest results to backtests\2026-04-26_16-16-28.log
+
+--- Day 2 (TTE=6d, match=worse) ---
+Backtesting .\tmpp7qjdzs2.py on round 4 day 2
+HYDROGEL_PACK: 28,540
+VELVETFRUIT_EXTRACT: 8,136
+VEV_4000: 562
+VEV_4500: 182
+VEV_5000: 172
+VEV_5100: 2,178
+VEV_5200: 0
+VEV_5300: -225
+VEV_5400: 189
+VEV_5500: 0
+VEV_6000: 0
+VEV_6500: 0
+Total profit: 39,736
+
+Successfully saved backtest results to backtests\2026-04-26_16-16-39.log
+
+--- Day 3 (TTE=5d, match=worse) ---
+Backtesting .\tmp8lt0kg7f.py on round 4 day 3
+HYDROGEL_PACK: 48,105
+VELVETFRUIT_EXTRACT: 24,415
+VEV_4000: 290
+VEV_4500: 15
+VEV_5000: 12
+VEV_5100: -66
+VEV_5200: 0
+VEV_5300: 0
+VEV_5400: -104
+VEV_5500: 82
+VEV_6000: 0
+VEV_6500: 0
+Total profit: 72,750
+
+Successfully saved backtest results to backtests\2026-04-26_16-16-50.log
+
+
+=== R4 PNL SUMMARY ===
+  Day 1:     63,624
+  Day 2:     39,736
+  Day 3:     72,750
+  TOTAL:    176,110

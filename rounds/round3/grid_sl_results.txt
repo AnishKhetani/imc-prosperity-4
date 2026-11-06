@@ -1,0 +1,127 @@
+
+======================================================================
+HYDROGEL_SOFT_LIMIT grid search  |  30 MC sims x 2 crash scenarios
+SL values to test: [50, 75, 100, 125, 150, 175, 200]
+======================================================================
+
+Calibrating product models from historical data...
+
+-- SL=50 ------------------------------------------
+  Running 3-day backtester...  d0=+26657  d1=+40248  d2=+29264  total=+96169
+python :   Using 4 worker processes
+At line:1 char:32
++ ... NG="utf-8"; python scripts/grid_hgp_sl.py --sims 30 --workers 4 2>&1  ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  Using 4 worker processes:String 
+   ) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Using 4 worker processes
+  Running 30 MC sims x 2 crash scenarios...
+    hgp_extreme_down        p5=   -9000  median=   -1228  mean=   -1992
+
+    hgp_no_reversion        p5=  -10583  median=    -452  mean=   -1333
+-- SL=75 ------------------------------------------
+  Running 3-day backtester...  d0=+30346  d1=+46142  d2=+33826  total=+110314
+  Using 4 worker processes
+  Using 4 worker processes
+  Running 30 MC sims x 2 crash scenarios...
+    hgp_extreme_down        p5=  -13515  median=    -611  mean=   -2167
+
+    hgp_no_reversion        p5=  -13448  median=    -218  mean=   -2166
+-- SL=100 ------------------------------------------
+  Running 3-day backtester...  d0=+34245  d1=+52334  d2=+38342  total=+124921
+  Using 4 worker processes
+  Using 4 worker processes
+  Running 30 MC sims x 2 crash scenarios...
+    hgp_extreme_down        p5=  -26469  median=   -1335  mean=   -7028
+
+    hgp_no_reversion        p5=  -16596  median=    +226  mean=   -2613
+-- SL=125 ------------------------------------------
+  Running 3-day backtester...  d0=+39036  d1=+58562  d2=+42420  total=+140018
+  Using 4 worker processes
+  Using 4 worker processes
+  Running 30 MC sims x 2 crash scenarios...
+    hgp_extreme_down        p5=  -26670  median=    -315  mean=   -4604
+
+    hgp_no_reversion        p5=  -26569  median=     +27  mean=   -3454
+-- SL=150 ------------------------------------------
+  Running 3-day backtester...  d0=+43976  d1=+64496  d2=+46838  total=+155310
+  Using 4 worker processes
+  Using 4 worker processes
+  Running 30 MC sims x 2 crash scenarios...
+    hgp_extreme_down        p5=  -32621  median=    -352  mean=   -8531
+
+    hgp_no_reversion        p5=  -27449  median=    +829  mean=   -5727
+-- SL=175 ------------------------------------------
+  Running 3-day backtester...  d0=+61846  d1=+60184  d2=+50130  total=+172160
+  Using 4 worker processes
+  Using 4 worker processes
+  Running 30 MC sims x 2 crash scenarios...
+    hgp_extreme_down        p5=  -29487  median=   -1590  mean=   -7119
+
+    hgp_no_reversion        p5=  -16199  median=   +2081  mean=     +56
+-- SL=200 ------------------------------------------
+  Running 3-day backtester...  d0=+77688  d1=+53704  d2=+51956  total=+183348
+  Using 4 worker processes
+  Using 4 worker processes
+  Running 30 MC sims x 2 crash scenarios...
+    hgp_extreme_down        p5=  -56720  median=   +3611  mean=   -3461
+
+    hgp_no_reversion        p5=  -36376  median=   +3359  mean=   -1128
+
+======================================================================
+SUMMARY TABLE
+======================================================================
+
+>> BACKTEST TOTAL PnL (10k ticks/day x 3 days):
+    SL |      Day 0      Day 1      Day 2      TOTAL
+  --------------------------------------------------
+    50 |      26657      40248      29264      96169
+    75 |      30346      46142      33826     110314
+   100 |      34245      52334      38342     124921
+   125 |      39036      58562      42420     140018
+   150 |      43976      64496      46838     155310 <-- current
+   175 |      61846      60184      50130     172160
+   200 |      77688      53704      51956     183348
+
+>> MC CRASH SCENARIO p5 (5th-percentile PnL | 30 sims, 1000 ticks):
+
+  Scenario: hgp_extreme_down
+    SL |         p5     median       mean
+  ------------------------------------------
+    50 |      -9000      -1228      -1992
+    75 |     -13515       -611      -2167
+   100 |     -26469      -1335      -7028
+   125 |     -26670       -315      -4604
+   150 |     -32621       -352      -8531 <-- current
+   175 |     -29487      -1590      -7119
+   200 |     -56720       3611      -3461
+
+  Scenario: hgp_no_reversion
+    SL |         p5     median       mean
+  ------------------------------------------
+    50 |     -10583       -452      -1333
+    75 |     -13448       -218      -2166
+   100 |     -16596        226      -2613
+   125 |     -26569         27      -3454
+   150 |     -27449        829      -5727 <-- current
+   175 |     -16199       2081         56
+   200 |     -36376       3359      -1128
+
+>> RISK-ADJUSTED SCORE = backtest_total + 2 * (worst p5 across crash scenarios):
+  [higher is better; p5 dominates when it is very negative]
+    SL |   BT total   worst p5      score
+  ------------------------------------------
+    50 |      96169     -10583      75003 <-- BEST
+    75 |     110314     -13515      83285 <-- BEST
+   100 |     124921     -26469      71983
+   125 |     140018     -26670      86678 <-- BEST
+   150 |     155310     -32621      90067 <-- BEST
+   175 |     172160     -29487     113186 <-- BEST
+   200 |     183348     -56720      69908
+
+======================================================================
+RECOMMENDATION: HYDROGEL_SOFT_LIMIT = 175  (score=113186)
+======================================================================
+

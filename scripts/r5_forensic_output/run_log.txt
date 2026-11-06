@@ -1,0 +1,185 @@
+==========================================================================================
+LOADING R5 DATA
+==========================================================================================
+  day 2: prices rows= 500000  trades rows= 11090  products=50
+  day 3: prices rows= 500000  trades rows= 12320  products=50
+  day 4: prices rows= 500000  trades rows= 11975  products=50
+  total products: 50
+  groups:
+    GALAXY_SOUNDS  (5): ['GALAXY_SOUNDS_BLACK_HOLES', 'GALAXY_SOUNDS_DARK_MATTER', 'GALAXY_SOUNDS_PLANETARY_RINGS', 'GALAXY_SOUNDS_SOLAR_FLAMES', 'GALAXY_SOUNDS_SOLAR_WINDS']
+    MICROCHIP      (5): ['MICROCHIP_CIRCLE', 'MICROCHIP_OVAL', 'MICROCHIP_RECTANGLE', 'MICROCHIP_SQUARE', 'MICROCHIP_TRIANGLE']
+    OXYGEN_SHAKE   (5): ['OXYGEN_SHAKE_CHOCOLATE', 'OXYGEN_SHAKE_EVENING_BREATH', 'OXYGEN_SHAKE_GARLIC', 'OXYGEN_SHAKE_MINT', 'OXYGEN_SHAKE_MORNING_BREATH']
+    PANEL          (5): ['PANEL_1X2', 'PANEL_1X4', 'PANEL_2X2', 'PANEL_2X4', 'PANEL_4X4']
+    PEBBLES        (5): ['PEBBLES_L', 'PEBBLES_M', 'PEBBLES_S', 'PEBBLES_XL', 'PEBBLES_XS']
+    ROBOT          (5): ['ROBOT_DISHES', 'ROBOT_IRONING', 'ROBOT_LAUNDRY', 'ROBOT_MOPPING', 'ROBOT_VACUUMING']
+    SLEEP_POD      (5): ['SLEEP_POD_COTTON', 'SLEEP_POD_LAMB_WOOL', 'SLEEP_POD_NYLON', 'SLEEP_POD_POLYESTER', 'SLEEP_POD_SUEDE']
+    SNACKPACK      (5): ['SNACKPACK_CHOCOLATE', 'SNACKPACK_PISTACHIO', 'SNACKPACK_RASPBERRY', 'SNACKPACK_STRAWBERRY', 'SNACKPACK_VANILLA']
+    TRANSLATOR     (5): ['TRANSLATOR_ASTRO_BLACK', 'TRANSLATOR_ECLIPSE_CHARCOAL', 'TRANSLATOR_GRAPHITE_MIST', 'TRANSLATOR_SPACE_GRAY', 'TRANSLATOR_VOID_BLUE']
+    UV_VISOR       (5): ['UV_VISOR_AMBER', 'UV_VISOR_MAGENTA', 'UV_VISOR_ORANGE', 'UV_VISOR_RED', 'UV_VISOR_YELLOW']
+
+==========================================================================================
+PHASE B4 — BASELINE STATISTICS
+==========================================================================================
+                      product     n  mid_mean   mid_std   ret_std      skew      kurt  spread_mean  spread_med   depth_b   depth_a      ou_hl     hurst      acf1
+    GALAXY_SOUNDS_BLACK_HOLES 30000 11466.872   958.429    11.479     0.007     0.113       14.513      14.000    49.568    49.567  17831.888     0.508    -0.017
+    GALAXY_SOUNDS_DARK_MATTER 30000 10226.662   330.695    10.245    -0.018    -0.007       13.051      13.000    49.568    49.567   1421.458     0.505    -0.012
+GALAXY_SOUNDS_PLANETARY_RINGS 30000 10766.673   765.824    10.879     0.018     0.070       13.690      14.000    49.568    49.567   8445.650     0.511    -0.004
+   GALAXY_SOUNDS_SOLAR_FLAMES 30000 11092.572   450.143    11.094     0.005     0.009       14.072      14.000    49.568    49.567   1750.419     0.494    -0.012
+    GALAXY_SOUNDS_SOLAR_WINDS 30000 10437.544   541.102    10.539     0.001     0.050       13.301      14.000    49.568    49.567   3491.417     0.502    -0.008
+             MICROCHIP_CIRCLE 30000  9214.885   532.503     9.234    -0.023     0.070        8.262       8.000    16.026    16.030   6561.164     0.500    -0.005
+               MICROCHIP_OVAL 30000  8179.599  1551.886    12.478    -0.006     0.413        7.450       8.000    16.026    16.030 110602.039     0.491    -0.007
+          MICROCHIP_RECTANGLE 30000  8732.439   752.007    13.130     0.006     0.090        7.886       8.000    16.026    16.030   3470.166     0.486    -0.003
+             MICROCHIP_SQUARE 30000 13594.748  1830.222    20.707    -0.005     0.250       11.719      12.000    16.026    16.030   5402.694     0.498    -0.024
+           MICROCHIP_TRIANGLE 30000  9686.391   833.356    14.504     0.018     0.080        8.635       9.000    16.026    16.030   8584.189     0.505    -0.007
+       OXYGEN_SHAKE_CHOCOLATE 30000  9556.879   560.592    10.890    -0.126    15.844       12.185      12.000    49.568    49.567   5410.530     0.483    -0.089
+  OXYGEN_SHAKE_EVENING_BREATH 30000  9271.895   399.815    10.983     0.012    14.201       11.860      12.000    49.568    49.567   1610.619     0.468    -0.123
+          OXYGEN_SHAKE_GARLIC 30000 11925.640   953.333    12.014     0.015     0.047       15.055      15.000    49.568    49.567   9008.443     0.496    -0.003
+            OXYGEN_SHAKE_MINT 30000  9838.394   508.123     9.883     0.008    -0.025       12.594      13.000    49.568    49.567   3759.277     0.513    -0.003
+  OXYGEN_SHAKE_MORNING_BREATH 30000 10000.453   652.794    10.100     0.020     0.066       12.783      13.000    49.568    49.567   6200.786     0.485    -0.005
+                    PANEL_1X2 30000  8922.729   589.907     9.054    -0.021     0.052       11.510      12.000    49.568    49.567   4788.902     0.500    -0.002
+                    PANEL_1X4 30000  9397.581   834.020     9.484    -0.011     0.144        8.377       8.000    29.547    29.546   9540.005     0.516    -0.002
+                    PANEL_2X2 30000  9576.598   674.783     9.597     0.004     0.023        8.515       9.000    29.547    29.546   6510.797     0.501    -0.011
+                    PANEL_2X4 30000 11265.373   627.181    11.289    -0.007     0.001        9.841      10.000    29.547    29.546   3857.301     0.502     0.000
+                    PANEL_4X4 30000  9878.719   457.030     9.957     0.003     0.007        8.750       9.000    29.547    29.546   3580.397     0.502    -0.006
+                    PEBBLES_L 30000 10174.111   622.321    15.026    -0.008    -0.017       13.021      13.000    37.606    37.614   2822.784     0.489     0.007
+                    PEBBLES_M 30000 10263.243   687.806    15.133     0.021    -0.012       13.121      13.000    37.606    37.614   2915.811     0.489    -0.005
+                    PEBBLES_S 30000  8932.357   833.268    15.020     0.009    -0.028       11.552      12.000    37.606    37.614   4033.605     0.504     0.008
+                   PEBBLES_XL 30000 13225.589  1776.516    30.314    -0.000    -0.029       16.631      17.000    37.606    37.614   4390.145     0.483     0.008
+                   PEBBLES_XS 30000  7404.640  1449.523    15.052    -0.008    -0.045        9.745       9.000    37.606    37.614   7490.501     0.482    -0.016
+                 ROBOT_DISHES 30000 10018.315   556.630    17.779     0.050    21.935        7.350       7.000    16.051    16.050   1592.921     0.410    -0.232
+                ROBOT_IRONING 30000  8701.570   771.017    10.443    -0.008    14.835        6.393       6.000    16.051    16.050   5888.513     0.480    -0.125
+                ROBOT_LAUNDRY 30000  9822.762   614.312     9.822     0.017    -0.025        7.165       7.000    16.051    16.050   6029.441     0.497     0.006
+                ROBOT_MOPPING 30000 11100.213   767.148    11.145     0.009     0.053        7.971       8.000    16.051    16.050   5207.740     0.494    -0.011
+              ROBOT_VACUUMING 30000  9166.776   535.250     9.236    -0.009     0.061        6.753       7.000    16.051    16.050   4846.849     0.495    -0.008
+             SLEEP_POD_COTTON 30000 11527.614   887.678    11.676    -0.019     0.087       10.050      10.000    29.547    29.546   5111.678     0.511    -0.003
+          SLEEP_POD_LAMB_WOOL 30000 10701.442   413.162    10.712     0.003     0.055        9.400      10.000    29.547    29.546   1809.326     0.518     0.004
+              SLEEP_POD_NYLON 30000  9636.473   508.720     9.621    -0.006     0.059        8.565       9.000    29.547    29.546   6318.146     0.495     0.000
+          SLEEP_POD_POLYESTER 30000 11840.561   977.523    11.891     0.016     0.053       10.296      11.000    29.547    29.546   5219.918     0.492    -0.002
+              SLEEP_POD_SUEDE 30000 11397.420   899.931    11.421    -0.022     0.055        9.949      10.000    29.547    29.546   5904.837     0.492    -0.006
+          SNACKPACK_CHOCOLATE 30000  9843.372   200.730     6.575     0.010     0.065       16.471      17.000    79.991    79.991   1299.976     0.502    -0.031
+          SNACKPACK_PISTACHIO 30000  9495.844   187.492     5.238    -0.001    -0.030       15.926      16.000    79.991    79.991   1570.428     0.481    -0.025
+          SNACKPACK_RASPBERRY 30000 10077.812   169.811     8.092    -0.000    -0.010       16.842      17.000    79.991    79.991    624.022     0.480    -0.017
+         SNACKPACK_STRAWBERRY 30000 10706.609   363.567     8.133    -0.010    -0.036       17.826      18.000    79.991    79.991   2247.508     0.480    -0.014
+            SNACKPACK_VANILLA 30000 10097.302   178.512     6.513    -0.002     0.056       16.869      17.000    79.991    79.991   1076.987     0.506    -0.027
+       TRANSLATOR_ASTRO_BLACK 30000  9385.219   489.738     9.449    -0.009     0.077        8.366       8.000    29.547    29.546   3464.913     0.495    -0.006
+  TRANSLATOR_ECLIPSE_CHARCOAL 30000  9813.742   355.631     9.857    -0.020     0.043        8.700       9.000    29.547    29.546   1787.870     0.490    -0.007
+     TRANSLATOR_GRAPHITE_MIST 30000 10084.640   499.533    10.130     0.024    -0.026        8.912       9.000    29.547    29.546   3458.961     0.494    -0.004
+        TRANSLATOR_SPACE_GRAY 30000  9431.902   502.698     9.423     0.022     0.009        8.402       9.000    29.547    29.546   5304.554     0.503     0.008
+         TRANSLATOR_VOID_BLUE 30000 10858.579   579.245    10.834    -0.016     0.043        9.525      10.000    29.547    29.546   3710.161     0.479    -0.008
+               UV_VISOR_AMBER 30000  7911.696   996.901     8.005    -0.010     0.165       10.320      10.000    49.568    49.567   7286.083     0.507    -0.004
+             UV_VISOR_MAGENTA 30000 11111.793   613.544    11.203     0.004     0.083       14.092      14.000    49.568    49.567   3244.168     0.479    -0.003
+              UV_VISOR_ORANGE 30000 10426.506   550.594    10.460    -0.028     0.026       13.284      13.000    49.568    49.567   5516.703     0.503     0.002
+                 UV_VISOR_RED 30000 11063.294   587.706    11.030    -0.006     0.004       14.039      14.000    49.568    49.567   3304.938     0.504    -0.003
+              UV_VISOR_YELLOW 30000 10957.461   681.797    11.006    -0.002     0.061       13.910      14.000    49.568    49.567   5134.455     0.484     0.003
+
+==========================================================================================
+PHASE B2 — ORDER BOOK / RETURN AUTOCORRELATION (lag 1..10)
+==========================================================================================
+Products with |ACF(1)| > 0.05: 4 / 50
+                    product      L1      L2      L3      L4      L5      L6      L7      L8      L9     L10
+     OXYGEN_SHAKE_CHOCOLATE  -0.089  -0.007  -0.011  -0.013   0.013  -0.002  -0.009  -0.007   0.029  -0.012
+OXYGEN_SHAKE_EVENING_BREATH  -0.123  -0.002  -0.004  -0.000  -0.013   0.005  -0.006  -0.003   0.000  -0.005
+               ROBOT_DISHES  -0.232  -0.042  -0.019  -0.021   0.010  -0.005  -0.010  -0.006  -0.006   0.013
+              ROBOT_IRONING  -0.125  -0.014   0.005  -0.012   0.015  -0.008  -0.000  -0.001   0.001   0.004
+
+==========================================================================================
+PHASE B2/B3 — CROSS-PRODUCT CORRELATIONS (mid returns, lag 0)
+==========================================================================================
+
+Top 25 |corr| pairs (excluding self):
+  -0.924  [SAME]  SNACKPACK_RASPBERRY                 <-> SNACKPACK_STRAWBERRY
+  -0.916  [SAME]  SNACKPACK_CHOCOLATE                 <-> SNACKPACK_VANILLA
+  +0.913  [SAME]  SNACKPACK_PISTACHIO                 <-> SNACKPACK_STRAWBERRY
+  -0.831  [SAME]  SNACKPACK_PISTACHIO                 <-> SNACKPACK_RASPBERRY
+  -0.512  [SAME]  PEBBLES_M                           <-> PEBBLES_XL
+  -0.500  [SAME]  PEBBLES_L                           <-> PEBBLES_XL
+  -0.497  [SAME]  PEBBLES_XL                          <-> PEBBLES_XS
+  -0.496  [SAME]  PEBBLES_S                           <-> PEBBLES_XL
+  +0.040  [SAME]  SNACKPACK_PISTACHIO                 <-> SNACKPACK_VANILLA
+  +0.031  [SAME]  SNACKPACK_STRAWBERRY                <-> SNACKPACK_VANILLA
+  +0.031  [SAME]  SNACKPACK_CHOCOLATE                 <-> SNACKPACK_RASPBERRY
+  +0.028  [DIFF]  OXYGEN_SHAKE_MINT                   <-> SNACKPACK_VANILLA
+  +0.026  [DIFF]  GALAXY_SOUNDS_PLANETARY_RINGS       <-> SNACKPACK_PISTACHIO
+  +0.025  [SAME]  SNACKPACK_CHOCOLATE                 <-> SNACKPACK_PISTACHIO
+  +0.025  [DIFF]  ROBOT_MOPPING                       <-> SNACKPACK_RASPBERRY
+  +0.023  [DIFF]  SNACKPACK_PISTACHIO                 <-> UV_VISOR_MAGENTA
+  +0.023  [DIFF]  SNACKPACK_PISTACHIO                 <-> UV_VISOR_RED
+  +0.023  [DIFF]  SNACKPACK_STRAWBERRY                <-> UV_VISOR_RED
+  +0.022  [DIFF]  SNACKPACK_PISTACHIO                 <-> TRANSLATOR_ASTRO_BLACK
+  +0.022  [DIFF]  GALAXY_SOUNDS_SOLAR_WINDS           <-> TRANSLATOR_GRAPHITE_MIST
+  +0.022  [DIFF]  SNACKPACK_PISTACHIO                 <-> UV_VISOR_ORANGE
+  +0.022  [DIFF]  OXYGEN_SHAKE_MORNING_BREATH         <-> SNACKPACK_CHOCOLATE
+  +0.022  [DIFF]  GALAXY_SOUNDS_BLACK_HOLES           <-> OXYGEN_SHAKE_EVENING_BREATH
+  +0.021  [DIFF]  SNACKPACK_PISTACHIO                 <-> TRANSLATOR_ECLIPSE_CHARCOAL
+  +0.021  [DIFF]  SNACKPACK_CHOCOLATE                 <-> UV_VISOR_RED
+
+Within-group return correlation summary:
+  GALAXY_SOUNDS  mean=+0.004  med=+0.003  min=-0.001  max=+0.014
+  MICROCHIP      mean=+0.006  med=+0.006  min=+0.002  max=+0.013
+  OXYGEN_SHAKE   mean=+0.007  med=+0.007  min=+0.003  max=+0.013
+  PANEL          mean=+0.004  med=+0.005  min=-0.008  max=+0.010
+  PEBBLES        mean=-0.196  med=-0.001  min=-0.512  max=+0.015
+  ROBOT          mean=-0.001  med=-0.001  min=-0.009  max=+0.012
+  SLEEP_POD      mean=+0.003  med=+0.003  min=-0.007  max=+0.009
+  SNACKPACK      mean=-0.160  med=+0.021  min=-0.924  max=+0.913
+  TRANSLATOR     mean=+0.005  med=+0.004  min=-0.004  max=+0.018
+  UV_VISOR       mean=+0.006  med=+0.006  min=-0.003  max=+0.020
+
+==========================================================================================
+PHASE B3 — WITHIN-GROUP LINEAR COMBINATIONS (cointegration / basket arb)
+==========================================================================================
+
+(A) PEBBLES — size hierarchy:
+   PEBBLES_XS   mid_mean=  7404.64
+   PEBBLES_S    mid_mean=  8932.36
+   PEBBLES_M    mid_mean= 10263.24
+   PEBBLES_L    mid_mean= 10174.11
+   PEBBLES_XL   mid_mean= 13225.59
+   spread PEBBLES_S-PEBBLES_XS: mean=+1527.72 std=931.19 OU_hl=2291.1  hurst=0.495
+   spread PEBBLES_M-PEBBLES_S: mean=+1330.89 std=1368.66 OU_hl=5755.0  hurst=0.505
+   spread PEBBLES_L-PEBBLES_M: mean=-89.13 std=757.14 OU_hl=2110.6  hurst=0.478
+   spread PEBBLES_XL-PEBBLES_L: mean=+3051.48 std=1994.87 OU_hl=3922.7  hurst=0.488
+
+   PEBBLES pairwise ratios (mean / std):
+     PEBBLES_S/PEBBLES_XS: mean=1.2338 std=0.1578
+     PEBBLES_M/PEBBLES_XS: mean=1.4513 std=0.3464
+     PEBBLES_L/PEBBLES_XS: mean=1.4301 std=0.3021
+     PEBBLES_XL/PEBBLES_XS: mean=1.8920 std=0.5704
+     PEBBLES_M/PEBBLES_S: mean=1.1645 std=0.1776
+     PEBBLES_L/PEBBLES_S: mean=1.1503 std=0.1392
+     PEBBLES_XL/PEBBLES_S: mean=1.5109 std=0.3429
+     PEBBLES_L/PEBBLES_M: mean=0.9945 std=0.0745
+     PEBBLES_XL/PEBBLES_M: mean=1.2907 std=0.1680
+     PEBBLES_XL/PEBBLES_L: mean=1.3072 std=0.2119
+
+(B) PANEL — geometric size relationships (areas: 1x2=2, 1x4=4, 2x2=4, 2x4=8, 4x4=16):
+   PANEL_1X2  area= 2  mid_mean=  8922.73  per-area=4461.365
+   PANEL_1X4  area= 4  mid_mean=  9397.58  per-area=2349.395
+   PANEL_2X2  area= 4  mid_mean=  9576.60  per-area=2394.150
+   PANEL_2X4  area= 8  mid_mean= 11265.37  per-area=1408.172
+   PANEL_4X4  area=16  mid_mean=  9878.72  per-area=617.420
+   linear fit: price ~= 67.68 * area + 9348.01
+   basket  PANEL_2X4 - 2*PANEL_1X4: mean=-7529.79 std=2107.10 OU_hl=9955.1 hurst=0.518
+   basket  PANEL_4X4 - 2*PANEL_2X4: mean=-12652.03 std=1407.98 OU_hl=4949.1 hurst=0.494
+   basket  PANEL_4X4 - 4*PANEL_2X2: mean=-28427.67 std=2951.85 OU_hl=7302.8 hurst=0.502
+   basket  PANEL_2X2 - 2*PANEL_1X2: mean=-8268.86 std=1644.08 OU_hl=8995.6 hurst=0.499
+   basket  PANEL_1X4 - 2*PANEL_1X2: mean=-8447.88 std=1641.32 OU_hl=9380.8 hurst=0.497
+   substitute  PANEL_1X4 - PANEL_2X2 (both area 4): mean=-179.02 std=652.49 OU_hl=3240.4 hurst=0.493
+
+==========================================================================================
+PHASE B1 — TRADE-LEVEL ANALYSIS (no trader IDs available — using aggregate)
+==========================================================================================
+Traceback (most recent call last):
+  File ".\scripts\r5_phase_b_forensics.py", line 346, in <module>
+    merged = pd.merge_asof(tr, pr, on="timestamp", by="day", direction="backward")
+  File "C:\Users\user\AppData\Roaming\Python\Python310\site-packages\pandas\core\reshape\merge.py", line 708, in merge_asof
+    return op.get_result()
+  File "C:\Users\user\AppData\Roaming\Python\Python310\site-packages\pandas\core\reshape\merge.py", line 1927, in get_result
+    join_index, left_indexer, right_indexer = self._get_join_info()
+  File "C:\Users\user\AppData\Roaming\Python\Python310\site-packages\pandas\core\reshape\merge.py", line 1152, in _get_join_info
+    (left_indexer, right_indexer) = self._get_join_indexers()
+  File "C:\Users\user\AppData\Roaming\Python\Python310\site-packages\pandas\core\reshape\merge.py", line 2239, in _get_join_indexers
+    left_values = self._convert_values_for_libjoin(left_values, "left")
+  File "C:\Users\user\AppData\Roaming\Python\Python310\site-packages\pandas\core\reshape\merge.py", line 2183, in _convert_values_for_libjoin
+    raise ValueError(f"{side} keys must be sorted")
+ValueError: left keys must be sorted

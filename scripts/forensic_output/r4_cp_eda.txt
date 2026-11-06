@@ -1,0 +1,80 @@
+﻿CP         SYM                              N     B     S  avgSz                sizes      bAvg      sAvg buy@low% sell@hi%        PnL
+Mark 67    VELVETFRUIT_EXTRACT            165   165     0    9.2          1,2,5,6,7,8   5249.30      0.00     0.6%     0.0%      27261
+Mark 14    HYDROGEL_PACK                 1003   496   507    4.0            2,3,4,5,6   9988.54  10001.19     3.0%     5.1%      24415
+Mark 38    HYDROGEL_PACK                 1022   515   507    4.0            2,3,4,5,6  10001.05   9988.69     0.4%     1.2%     -24392
+Mark 49    VELVETFRUIT_EXTRACT            122    17   105    9.7          2,3,4,5,6,7   5247.59   5250.20     0.0%     0.0%     -15346
+Mark 55    VELVETFRUIT_EXTRACT           1198   598   600    5.5          1,3,4,5,6,7   5250.13   5245.02     0.7%     0.2%     -13204
+Mark 22    VELVETFRUIT_EXTRACT            126    25   101    6.7          3,4,5,6,7,8   5245.01   5247.95     4.0%     0.0%      -9984
+Mark 14    VEV_4000                       439   232   207    2.0                1,2,3   1238.29   1257.11     3.0%     7.7%       9241
+Mark 38    VEV_4000                       442   209   233    2.0                1,2,3   1256.97   1238.21     0.0%     0.0%      -9240
+Mark 14    VELVETFRUIT_EXTRACT            647   316   331    5.4          3,4,5,6,7,8   5244.65   5249.39     2.5%     1.2%       6906
+Mark 01    VELVETFRUIT_EXTRACT            504   260   244    5.5          3,4,5,6,7,8   5245.54   5250.97     3.5%     2.5%       4366
+Mark 22    VEV_5300                       164     1   163    3.3            1,2,3,4,5     28.00     37.11     0.0%     0.0%      -2514
+Mark 01    VEV_5400                       263   263     0    3.5              2,3,4,5     11.20      0.00    12.5%     0.0%       1882
+Mark 22    VEV_5400                       276     0   276    3.5              2,3,4,5      0.00     11.33     0.0%     0.0%      -1798
+Mark 01    VEV_5300                       132   132     0    3.3              2,3,4,5     36.32      0.00     6.8%     0.0%       1755
+Mark 22    VEV_5200                        47     1    46    3.4            1,2,3,4,5     69.00     75.43     0.0%     0.0%      -1123
+Mark 14    VEV_5200                        33    33     0    3.7              2,3,4,5     78.06      0.00     0.0%     0.0%        974
+Mark 22    VEV_5500                       306     0   306    3.5              2,3,4,5      0.00      3.93     0.0%     0.0%       -849
+Mark 01    VEV_5500                       299   299     0    3.5              2,3,4,5      3.89      0.00    27.8%     0.0%        837
+Mark 14    VEV_5300                        30    30     0    3.5              2,3,4,5     40.40      0.00     6.7%     0.0%        742
+Mark 01    VEV_6000                       317   317     0    3.5              2,3,4,5      0.00      0.00     0.0%     0.0%        552
+Mark 22    VEV_6000                       317     0   317    3.5              2,3,4,5      0.00      0.00     0.0%     0.0%       -552
+Mark 01    VEV_6500                       317   317     0    3.5              2,3,4,5      0.00      0.00     0.0%     0.0%        552
+Mark 22    VEV_6500                       317     0   317    3.5              2,3,4,5      0.00      0.00     0.0%     0.0%       -552
+Mark 01    VEV_5200                        11    11     0    3.1              2,3,4,5     65.44      0.00    27.3%     0.0%        155
+Mark 14    VEV_5400                        13    13     0    3.7              2,3,4,5     13.92      0.00     0.0%     0.0%        -84
+Mark 22    HYDROGEL_PACK                   19    11     8    3.9            2,3,4,5,6   9995.88   9992.38     0.0%     0.0%        -23
+Mark 14    VEV_5500                         7     7     0    3.9                2,4,5      5.33      0.00    14.3%     0.0%         12
+Mark 38    VEV_5200                         3     2     1    2.0                1,2,3     81.67     69.00     0.0%     0.0%         -6
+Mark 38    VEV_5100                         3     2     1    2.0                1,2,3    151.33    139.00     0.0%     0.0%         -1
+Mark 22    VEV_5100                         3     1     2    2.0                1,2,3    139.00    151.33     0.0%     0.0%          1
+Mark 22    VEV_4000                         3     1     2    2.0                1,2,3   1226.00   1237.00     0.0%     0.0%         -0
+Mark 38    VEV_4500                         3     2     1    2.0                1,2,3    737.00    726.00     0.0%     0.0%          0
+Mark 22    VEV_4500                         3     1     2    2.0                1,2,3    726.00    737.00     0.0%     0.0%         -0
+Mark 38    VEV_5000                         3     2     1    2.0                1,2,3    240.67    229.00     0.0%     0.0%         -0
+Mark 22    VEV_5000                         3     1     2    2.0                1,2,3    229.00    240.67     0.0%     0.0%          0
+
+=== Top buyer/seller pairs (by total qty) ===
+Mark 38    -> Mark 14    HYDROGEL_PACK                2033
+Mark 14    -> Mark 38    HYDROGEL_PACK                1989
+Mark 55    -> Mark 14    VELVETFRUIT_EXTRACT          1763
+Mark 14    -> Mark 55    VELVETFRUIT_EXTRACT          1761
+Mark 01    -> Mark 55    VELVETFRUIT_EXTRACT          1417
+Mark 55    -> Mark 01    VELVETFRUIT_EXTRACT          1375
+Mark 01    -> Mark 22    VEV_6000                     1105
+Mark 01    -> Mark 22    VEV_6500                     1105
+Mark 01    -> Mark 22    VEV_5500                     1042
+Mark 67    -> Mark 49    VELVETFRUIT_EXTRACT          963
+Mark 01    -> Mark 22    VEV_5400                     911
+Mark 67    -> Mark 22    VELVETFRUIT_EXTRACT          546
+Mark 14    -> Mark 38    VEV_4000                     458
+Mark 01    -> Mark 22    VEV_5300                     439
+Mark 38    -> Mark 14    VEV_4000                     412
+Mark 14    -> Mark 22    VEV_5200                     122
+Mark 14    -> Mark 22    VEV_5300                     105
+Mark 22    -> Mark 55    VELVETFRUIT_EXTRACT          92
+Mark 49    -> Mark 22    VELVETFRUIT_EXTRACT          89
+Mark 55    -> Mark 22    VELVETFRUIT_EXTRACT          62
+Mark 55    -> Mark 49    VELVETFRUIT_EXTRACT          54
+Mark 22    -> Mark 49    VELVETFRUIT_EXTRACT          54
+Mark 14    -> Mark 22    VEV_5400                     48
+Mark 22    -> Mark 38    HYDROGEL_PACK                42
+Mark 01    -> Mark 22    VEV_5200                     34
+Mark 38    -> Mark 22    HYDROGEL_PACK                32
+Mark 14    -> Mark 22    VEV_5500                     27
+Mark 49    -> Mark 55    VELVETFRUIT_EXTRACT          26
+Mark 38    -> Mark 22    VEV_4000                     3
+Mark 38    -> Mark 22    VEV_4500                     3
+
+=== Trade-count per day per (cp, sym) ù looking for 1-2 trades/day = insider ===
+Mark 14    VEV_5500                     per-day trade counts=[3, 3, 1]
+Mark 22    VEV_4000                     per-day trade counts=[1, 2]
+Mark 22    VEV_4500                     per-day trade counts=[1, 2]
+Mark 22    VEV_5000                     per-day trade counts=[1, 2]
+Mark 22    VEV_5100                     per-day trade counts=[1, 2]
+Mark 38    VEV_4500                     per-day trade counts=[1, 2]
+Mark 38    VEV_5000                     per-day trade counts=[1, 2]
+Mark 38    VEV_5100                     per-day trade counts=[1, 2]
+Mark 38    VEV_5200                     per-day trade counts=[1, 2]
+Mark 38    VEV_5300                     per-day trade counts=[1, 1]

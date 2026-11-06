@@ -1,0 +1,73 @@
+﻿Testing 32 combinations of 5 improvements
+Flags: NO_WINDDOWN, AS_PENALTY, ADAPTIVE_WIDTH, EMA_10, MULTI_LEVEL
+Wind-down threshold (scaled for backtester): 180000
+A-S gamma: 0.1
+
+[ 1/32] 00000 BASELINE                                                Total=    27,370  EM=  14,525  TOM=  12,846  d=     +0  [0s]
+[ 2/32] 00001 MULTI_LEVEL                                             Total=    27,285  EM=  14,525  TOM=  12,760  d=    -86  [78s]
+[ 3/32] 00010 EMA_10                                                  Total=    27,362  EM=  14,525  TOM=  12,837  d=     -8  [102s]
+[ 4/32] 00011 EMA_10+MULTI_LEVEL                                      Total=    27,492  EM=  14,525  TOM=  12,968  d=   +122  [113s]
+[ 5/32] 00100 ADAPTIVE_WIDTH                                          Total=    27,132  EM=  14,525  TOM=  12,606  d=   -239  [122s]
+[ 6/32] 00101 ADAPTIVE_WIDTH+MULTI_LEVEL                              Total=    27,058  EM=  14,525  TOM=  12,532  d=   -313  [122s]
+[ 7/32] 00110 ADAPTIVE_WIDTH+EMA_10                                   Total=    26,960  EM=  14,525  TOM=  12,434  d=   -411  [120s]
+[ 8/32] 00111 ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL                       Total=    27,170  EM=  14,525  TOM=  12,644  d=   -201  [113s]
+[ 9/32] 01000 AS_PENALTY                                              Total=    27,352  EM=  14,525  TOM=  12,828  d=    -18  [108s]
+[10/32] 01001 AS_PENALTY+MULTI_LEVEL                                  Total=    27,240  EM=  14,525  TOM=  12,714  d=   -131  [102s]
+[11/32] 01010 AS_PENALTY+EMA_10                                       Total=    27,342  EM=  14,525  TOM=  12,817  d=    -28  [96s]
+[12/32] 01011 AS_PENALTY+EMA_10+MULTI_LEVEL                           Total=    27,160  EM=  14,525  TOM=  12,636  d=   -210  [92s]
+[13/32] 01100 AS_PENALTY+ADAPTIVE_WIDTH                               Total=    27,245  EM=  14,525  TOM=  12,720  d=   -126  [88s]
+[14/32] 01101 AS_PENALTY+ADAPTIVE_WIDTH+MULTI_LEVEL                   Total=    27,126  EM=  14,525  TOM=  12,601  d=   -244  [83s]
+[15/32] 01110 AS_PENALTY+ADAPTIVE_WIDTH+EMA_10                        Total=    27,254  EM=  14,525  TOM=  12,728  d=   -117  [78s]
+[16/32] 01111 AS_PENALTY+ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL            Total=    27,062  EM=  14,525  TOM=  12,538  d=   -308  [73s]
+[17/32] 10000 NO_WINDDOWN                                             Total=    27,806  EM=  14,525  TOM=  13,281  d=   +436  [69s]
+[18/32] 10001 NO_WINDDOWN+MULTI_LEVEL                                 Total=    27,806  EM=  14,525  TOM=  13,281  d=   +436  [64s]
+[19/32] 10010 NO_WINDDOWN+EMA_10                                      Total=    27,542  EM=  14,525  TOM=  13,017  d=   +172  [59s]
+[20/32] 10011 NO_WINDDOWN+EMA_10+MULTI_LEVEL                          Total=    27,542  EM=  14,525  TOM=  13,017  d=   +172  [55s]
+[21/32] 10100 NO_WINDDOWN+ADAPTIVE_WIDTH                              Total=    27,784  EM=  14,525  TOM=  13,259  d=   +414  [50s]
+[22/32] 10101 NO_WINDDOWN+ADAPTIVE_WIDTH+MULTI_LEVEL                  Total=    27,784  EM=  14,525  TOM=  13,259  d=   +414  [45s]
+[23/32] 10110 NO_WINDDOWN+ADAPTIVE_WIDTH+EMA_10                       Total=    27,583  EM=  14,525  TOM=  13,058  d=   +212  [41s]
+[24/32] 10111 NO_WINDDOWN+ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL           Total=    27,583  EM=  14,525  TOM=  13,058  d=   +212  [36s]
+[25/32] 11000 NO_WINDDOWN+AS_PENALTY                                  Total=    27,502  EM=  14,525  TOM=  12,976  d=   +131  [32s]
+[26/32] 11001 NO_WINDDOWN+AS_PENALTY+MULTI_LEVEL                      Total=    27,502  EM=  14,525  TOM=  12,976  d=   +131  [27s]
+[27/32] 11010 NO_WINDDOWN+AS_PENALTY+EMA_10                           Total=    27,102  EM=  14,525  TOM=  12,576  d=   -269  [22s]
+[28/32] 11011 NO_WINDDOWN+AS_PENALTY+EMA_10+MULTI_LEVEL               Total=    27,102  EM=  14,525  TOM=  12,576  d=   -269  [18s]
+[29/32] 11100 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH                   Total=    27,526  EM=  14,525  TOM=  13,000  d=   +155  [13s]
+[30/32] 11101 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH+MULTI_LEVEL       Total=    27,526  EM=  14,525  TOM=  13,000  d=   +155  [9s]
+[31/32] 11110 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH+EMA_10            Total=    26,902  EM=  14,525  TOM=  12,378  d=   -468  [4s]
+[32/32] 11111 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL Total=    26,902  EM=  14,525  TOM=  12,378  d=   -468  [0s]
+
+================================================================================
+Completed 32 combos in 147.8s (4.6s/combo)
+Results written to: .\scripts\improvement_results.txt
+
+Baseline PnL: 27,370
+
+--------------------------------------------------------------------------------
+INDIVIDUAL IMPACT (single flag on, all others off):
+--------------------------------------------------------------------------------
+  NO_WINDDOWN           Total=    27,806  d=+    436  EM=  14,525  TOM=  13,281
+  AS_PENALTY            Total=    27,352  d=    -18  EM=  14,525  TOM=  12,828
+  ADAPTIVE_WIDTH        Total=    27,132  d=   -239  EM=  14,525  TOM=  12,606
+  EMA_10                Total=    27,362  d=     -8  EM=  14,525  TOM=  12,837
+  MULTI_LEVEL           Total=    27,285  d=    -86  EM=  14,525  TOM=  12,760
+
+  + POSITIVE: NO_WINDDOWN (+436)
+  - NEGATIVE: ADAPTIVE_WIDTH (-239), MULTI_LEVEL (-86), AS_PENALTY (-18), EMA_10 (-8)
+
+--------------------------------------------------------------------------------
+TOP 5 COMBINATIONS:
+--------------------------------------------------------------------------------
+  #1: NO_WINDDOWN                                              Total=    27,806  d=+    436
+  #2: NO_WINDDOWN+MULTI_LEVEL                                  Total=    27,806  d=+    436
+  #3: NO_WINDDOWN+ADAPTIVE_WIDTH                               Total=    27,784  d=+    414
+  #4: NO_WINDDOWN+ADAPTIVE_WIDTH+MULTI_LEVEL                   Total=    27,784  d=+    414
+  #5: NO_WINDDOWN+ADAPTIVE_WIDTH+EMA_10                        Total=    27,583  d=+    212
+
+--------------------------------------------------------------------------------
+MARGINAL CONTRIBUTION (avg impact when added to other combos):
+--------------------------------------------------------------------------------
+  NO_WINDDOWN           avg marginal: +    243  (min=   -351, max=   +726)
+  AS_PENALTY            avg marginal:    -213  (min=   -680, max=   +294)
+  ADAPTIVE_WIDTH        avg marginal:    -119  (min=   -402, max=    +41)
+  EMA_10                avg marginal:    -186  (min=   -623, max=   +208)
+  MULTI_LEVEL           avg marginal:     -26  (min=   -191, max=   +210)

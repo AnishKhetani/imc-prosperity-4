@@ -1,0 +1,286 @@
+Testing 32 combinations of 5 improvements
+Flags: NO_WINDDOWN, AS_PENALTY, ADAPTIVE_WIDTH, EMA_10, MULTI_LEVEL
+Wind-down threshold (scaled for backtester): 180000
+A-S gamma: 0.1
+
+[ 1/32] 00000 BASELINE                                                ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 2/32] 00001 MULTI_LEVEL                                             ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 3/32] 00010 EMA_10                                                  ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 4/32] 00011 EMA_10+MULTI_LEVEL                                      ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 5/32] 00100 ADAPTIVE_WIDTH                                          ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 6/32] 00101 ADAPTIVE_WIDTH+MULTI_LEVEL                              ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 7/32] 00110 ADAPTIVE_WIDTH+EMA_10                                   ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 8/32] 00111 ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL                       ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[ 9/32] 01000 AS_PENALTY                                              ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[10/32] 01001 AS_PENALTY+MULTI_LEVEL                                  ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[11/32] 01010 AS_PENALTY+EMA_10                                       ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[12/32] 01011 AS_PENALTY+EMA_10+MULTI_LEVEL                           ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[13/32] 01100 AS_PENALTY+ADAPTIVE_WIDTH                               ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[14/32] 01101 AS_PENALTY+ADAPTIVE_WIDTH+MULTI_LEVEL                   ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[15/32] 01110 AS_PENALTY+ADAPTIVE_WIDTH+EMA_10                        ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[16/32] 01111 AS_PENALTY+ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL            ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[17/32] 10000 NO_WINDDOWN                                             ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[18/32] 10001 NO_WINDDOWN+MULTI_LEVEL                                 ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[19/32] 10010 NO_WINDDOWN+EMA_10                                      ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[20/32] 10011 NO_WINDDOWN+EMA_10+MULTI_LEVEL                          ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[21/32] 10100 NO_WINDDOWN+ADAPTIVE_WIDTH                              ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[22/32] 10101 NO_WINDDOWN+ADAPTIVE_WIDTH+MULTI_LEVEL                  ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[23/32] 10110 NO_WINDDOWN+ADAPTIVE_WIDTH+EMA_10                       ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[24/32] 10111 NO_WINDDOWN+ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL           ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[25/32] 11000 NO_WINDDOWN+AS_PENALTY                                  ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[26/32] 11001 NO_WINDDOWN+AS_PENALTY+MULTI_LEVEL                      ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[27/32] 11010 NO_WINDDOWN+AS_PENALTY+EMA_10                           ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[28/32] 11011 NO_WINDDOWN+AS_PENALTY+EMA_10+MULTI_LEVEL               ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[29/32] 11100 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH                   ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[30/32] 11101 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH+MULTI_LEVEL       ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[31/32] 11110 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH+EMA_10            ERROR: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 115: character maps to <undefined>
+
+[32/32] 11111 NO_WINDDOWN+AS_PENALTY+ADAPTIVE_WIDTH+EMA_10+MULTI_LEVEL ERROR: 'charmap' codec can't encode character '\u0394' in position 116: character maps to <undefined>
+Traceback (most recent call last):
+  File ".\scripts\test_improvements.py", line 293, in main
+    print(line, flush=True)
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 116: character maps to <undefined>
+
+
+================================================================================
+Completed 32 combos in 153.8s (4.8s/combo)
+Results written to: .\scripts\improvement_results.txt
+
+Baseline PnL: 27,370
+python : Traceback (most recent call last):
+At line:1 char:1
++ python -u .\scri ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last) 
+   ::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File ".\scripts\test_imp
+rovements.py", line 392, in <module>
+    main()
+  File ".\scripts\test_imp
+rovements.py", line 321, in main
+    print(f"\n{'-'*80}")
+  File "C:\Users\user\AppData\Local\Programs\Python\Python310\
+lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+UnicodeEncodeError: 'charmap' codec can't encode characters in position 2-81: 
+character maps to <undefined>

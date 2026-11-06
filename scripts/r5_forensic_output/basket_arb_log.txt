@@ -1,0 +1,77 @@
+=== SNACKPACK: subset sums (k=2..5) ===
+  k=2  CHOCOLATE+PISTACHIO                  mean= 19339.22  std= 332.95  range=1549.5
+  k=2  CHOCOLATE+RASPBERRY                  mean= 19921.18  std= 268.83  range=1599.5
+  k=2  CHOCOLATE+STRAWBERRY                 mean= 20549.98  std= 305.79  range=1721.0
+  k=2  CHOCOLATE+VANILLA                    mean= 19940.67  std=  76.20  range=342.0
+  k=2  PISTACHIO+RASPBERRY                  mean= 19573.66  std= 179.77  range=896.0
+  k=2  PISTACHIO+STRAWBERRY                 mean= 20202.45  std= 327.38  range=1985.0
+  k=2  PISTACHIO+VANILLA                    mean= 19593.15  std= 214.61  range=1165.5
+  k=2  RASPBERRY+STRAWBERRY                 mean= 20784.42  std= 331.58  range=1287.5
+  k=2  RASPBERRY+VANILLA                    mean= 20175.11  std= 249.06  range=1320.0
+  k=2  STRAWBERRY+VANILLA                   mean= 20803.91  std= 448.28  range=2295.5
+  k=3  CHOCOLATE+PISTACHIO+RASPBERRY        mean= 29417.03  std= 333.41  range=1598.5
+  k=3  CHOCOLATE+PISTACHIO+STRAWBERRY       mean= 30045.82  std= 322.36  range=1953.0
+  k=3  CHOCOLATE+PISTACHIO+VANILLA          mean= 29436.52  std= 235.39  range=1198.5
+  k=3  CHOCOLATE+RASPBERRY+STRAWBERRY       mean= 30627.79  std= 272.79  range=1357.0
+  k=3  CHOCOLATE+RASPBERRY+VANILLA          mean= 30018.49  std= 197.77  range=1245.5
+  k=3  CHOCOLATE+STRAWBERRY+VANILLA         mean= 30647.28  std= 309.72  range=1626.5
+  k=3  PISTACHIO+RASPBERRY+STRAWBERRY       mean= 30280.26  std= 230.81  range=1051.0
+  k=3  PISTACHIO+RASPBERRY+VANILLA          mean= 29670.96  std= 211.08  range=1209.5
+  k=3  PISTACHIO+STRAWBERRY+VANILLA         mean= 30299.75  std= 393.69  range=2357.5
+  k=3  RASPBERRY+STRAWBERRY+VANILLA         mean= 30881.72  std= 424.32  range=1722.5
+  k=4  CHOCOLATE+PISTACHIO+RASPBERRY+STRAWBERRY  mean= 40123.64  std= 230.54  range=1185.5
+  k=4  CHOCOLATE+PISTACHIO+RASPBERRY+VANILLA  mean= 39514.33  std= 238.84  range=1174.0
+  k=4  CHOCOLATE+PISTACHIO+STRAWBERRY+VANILLA  mean= 40143.13  std= 292.19  range=1868.5
+  k=4  CHOCOLATE+RASPBERRY+STRAWBERRY+VANILLA  mean= 40725.09  std= 279.57  range=1218.5
+  k=4  PISTACHIO+RASPBERRY+STRAWBERRY+VANILLA  mean= 40377.57  std= 320.03  range=1585.0
+  k=5  CHOCOLATE+PISTACHIO+RASPBERRY+STRAWBERRY+VANILLA  mean= 50220.94  std= 189.58  range=919.5
+
+=== SNACKPACK: subset sums with mixed signs (k=3, +/-) ===
+  trying (a+b-c) for all triples:
+
+=== SNACKPACK: per-day basket constants? ===
+  day 2  ALL_5 sum  mean=50040.85 std=161.05  range=691.00
+  day 2  CHOC+VAN   mean=20025.04 std=42.48  range=184.50
+  day 2  PIST+RASP  mean=19720.48 std=162.42  range=641.00
+  day 2  RASP+STRA  mean=20360.20 std=162.84  range=729.50
+  day 3  ALL_5 sum  mean=50326.36 std=131.37  range=635.00
+  day 3  CHOC+VAN   mean=19926.89 std=31.60  range=169.00
+  day 3  PIST+RASP  mean=19604.84 std=92.65  range=401.00
+  day 3  RASP+STRA  mean=20912.09 std=73.05  range=347.50
+  day 4  ALL_5 sum  mean=50295.60 std=124.51  range=535.50
+  day 4  CHOC+VAN   mean=19870.09 std=48.22  range=232.00
+  day 4  PIST+RASP  mean=19395.65 std=88.17  range=422.00
+  day 4  RASP+STRA  mean=21080.98 std=117.38  range=421.00
+
+=== PEBBLES: per-day exact basket sum ===
+  day 2  PEBBLES sum_5  mean=49999.9080  std=2.8156  range=34.50  N=10000
+            within ±2: 97.14%   beyond ±5: 2.8600%
+            dev: mean=-0.0920  p1=-17.50  p99=+14.50  abs_max=18.50
+  day 3  PEBBLES sum_5  mean=49999.9700  std=2.7577  range=35.00  N=10000
+            within ±2: 97.21%   beyond ±5: 2.7900%
+            dev: mean=-0.0300  p1=-17.00  p99=+15.00  abs_max=18.50
+  day 4  PEBBLES sum_5  mean=49999.9408  std=2.8213  range=34.50  N=10000
+            within ±2: 97.12%   beyond ±5: 2.8800%
+            dev: mean=-0.0592  p1=-17.50  p99=+15.00  abs_max=18.50
+
+=== Sample 5 ticks where PEBBLES sum deviates most from 50000 ===
+product        PEBBLES_XS  PEBBLES_S  PEBBLES_M  PEBBLES_L  PEBBLES_XL     sum5   dev  absdev
+day timestamp                                                                                
+4   105800         6621.0     8559.5    10994.5    11042.5     12764.0  49981.5 -18.5    18.5
+2   181400        10017.0    10486.0     9632.0    10303.5      9543.0  49981.5 -18.5    18.5
+3   181700         7717.5     9398.0     9063.0     9973.0     13830.0  49981.5 -18.5    18.5
+2   917200         8464.5     8967.5     9392.0     9978.0     13179.5  49981.5 -18.5    18.5
+    55600         10013.0    10411.0     9786.5    10046.0      9725.0  49981.5 -18.5    18.5
+
+=== Top 25 PEBBLES dislocations and corresponding bid/ask spreads ===
+  Computing tradable basket bid/ask: best bids of each leg sum vs best asks.
+  ticks with positive sell-basket arb (basket_bid > 50000): 0/30000   mean_edge=0.00  max=0.00
+  ticks with positive buy-basket arb (basket_ask < 50000): 447/30000   mean_edge=2.50  max=4.00
+  total positive edge ticks (either side): 447
+  pct of ticks with arb available: 1.49%
+  total integrated edge if traded once per opportunity (sum of positive edges):
+    sell side: 0   buy side: 1117
+
+=== SNACKPACK CHOC+VAN basket arb test (target=19940 approx) ===
+  sell signals (>19979): 7329 mean_edge=49.98 max=121.23
+  buy signals (<19903): 7176 mean_edge=42.11 max=127.57

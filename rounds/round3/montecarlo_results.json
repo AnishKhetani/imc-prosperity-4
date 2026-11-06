@@ -1,0 +1,26 @@
+{
+  "n_sims": 2,
+  "scenario": "baseline",
+  "mode": "bootstrap",
+  "round": 4,
+  "n_ticks": 500,
+  "tte_start_days": 7.0,
+  "enable_named_traders": true,
+  "pnl_mean": 44053.963575420115,
+  "pnl_std": 3156.7443232101723,
+  "pnl_median": 44053.963575420115,
+  "pnl_p5": 41212.89368453096,
+  "pnl_p25": 42475.591413815026,
+  "pnl_p75": 45632.335737025205,
+  "pnl_p95": 46895.03346630927,
+  "sharpe_mean": 2.140882266972341,
+  "sharpe_std": 0.11594314491254432,
+  "win_rate": 1.0,
+  "max_drawdown_mean": 4222.290489284304,
+  "max_drawdown_p95": 4499.859463745384,
+  "avg_fills": 576.5,
+  "per_sim_pnl": [
+    47210.70789863029,
+    40897.21925220994
+  ]
+}

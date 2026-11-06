@@ -1,0 +1,27 @@
+Round 1 Manual Challenge: "An Intarian Welcome"
+
+MECHANIC: Exchange Auction
+- Two products: DRYLAND_FLAX and EMBER_MUSHROOM
+- You submit a single limit order (price, quantity) per product — you are a BUYER (bidder)
+- You submit LAST. No other orders arrive after yours. Order book is fully known.
+
+AUCTION CLEARING RULES
+1. Exchange picks a single clearing price that maximizes total traded volume
+2. Ties broken by choosing the higher price
+3. All bids with price >= clearing price AND asks with price <= clearing price execute at the clearing price
+4. Allocation: price priority, then time priority
+5. You are LAST in time priority at any price level you join (worst priority at your price)
+
+GUARANTEED BUYBACK (Post-Auction)
+- DRYLAND_FLAX: buyback at 30 per unit, no fees
+- EMBER_MUSHROOM: buyback at 20 per unit, fee: 0.10 per unit traded
+
+PROFIT FORMULA
+- DRYLAND_FLAX: profit = (30 - clearing_price) * quantity_filled
+- EMBER_MUSHROOM: profit = (20 - clearing_price - 0.10) * quantity_filled = (19.90 - clearing_price) * quantity_filled
+
+STRATEGY CONSIDERATIONS
+1. For each possible bid price, simulate the clearing price and your fill quantity
+2. Since you're last in time priority, at the clearing price level you only get residual volume
+3. Your bid can SHIFT the clearing price (adding bid volume changes max-volume calculation)
+4. Optimize (bid_price, bid_quantity) to maximize profit = (buyback - clearing_price) * your_fill

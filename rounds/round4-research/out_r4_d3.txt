@@ -1,0 +1,25 @@
+  Algorithm : submissionr4.py
+  Match     : worse
+  Days      : [3]
+
+--- Day 3 (TTE=5d, match=worse) ---
+Backtesting .\submissionr4.py on round 4 day 3
+HYDROGEL_PACK: 385
+VELVETFRUIT_EXTRACT: -11,070
+VEV_4000: 0
+VEV_4500: 0
+VEV_5000: 0
+VEV_5100: 0
+VEV_5200: 0
+VEV_5300: 0
+VEV_5400: -104
+VEV_5500: 82
+VEV_6000: 0
+VEV_6500: 0
+Total profit: -10,706
+
+Successfully saved backtest results to backtests\2026-04-26_14-08-13.log
+
+
+=== R4 PNL SUMMARY ===
+  Day 3:    -10,706

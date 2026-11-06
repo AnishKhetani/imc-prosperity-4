@@ -1,0 +1,169 @@
+python : ============================================================
+At line:1 char:1
++ python scripts/run_r3_mc_stress.py > mc_results.txt 2>&1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (===============...=============== 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Building R3 product models...
+============================================================
+  HYDROGEL_PACK: calibrated  sigma=2.543  kappa=0.0050  drift=-0.01334  
+spread=15.7
+  VELVETFRUIT_EXTRACT: calibrated  sigma=1.213  kappa=0.0030  drift=0.00467  
+spread=5.0
+
+============================================================
+  Loading algo: submission (submission_eval.py)
+============================================================
+  Running [submission] x [baseline] ...
+    done: mean=4,253  p5=-8,885  wr=70%
+  Running [submission] x [platform_like] ...
+    done: mean=4,923  p5=-6,953  wr=82%
+  Running [submission] x [hgp_crash_down] ...
+    done: mean=-4,219  p5=-20,059  wr=34%
+  Running [submission] x [hgp_crash_up] ...
+    done: mean=-8,242  p5=-26,303  wr=20%
+  Running [submission] x [hgp_extreme_down] ...
+    done: mean=-12,707  p5=-40,317  wr=26%
+  Running [submission] x [hgp_no_reversion] ...
+    done: mean=-17,920  p5=-55,691  wr=20%
+  Running [submission] x [vfe_no_drift] ...
+    done: mean=3,962  p5=-8,786  wr=72%
+  Running [submission] x [vfe_fast_drift] ...
+    done: mean=4,261  p5=-8,845  wr=72%
+  Running [submission] x [high_vol] ...
+    done: mean=-3,464  p5=-23,686  wr=42%
+  Running [submission] x [wide_spread] ...
+    done: mean=5,280  p5=-5,879  wr=70%
+  Running [submission] x [thin_liquidity] ...
+    done: mean=3,752  p5=-7,844  wr=76%
+  Running [submission] x [spread_shock] ...
+    done: mean=12,026  p5=-8,319  wr=86%
+  Running [submission] x [full_stress] ...
+    done: mean=-2,606  p5=-24,595  wr=40%
+
+============================================================
+  Loading algo: v10 (v10_eval.py)
+============================================================
+  Running [v10] x [baseline] ...
+    done: mean=5,593  p5=-531  wr=94%
+  Running [v10] x [platform_like] ...
+    done: mean=5,271  p5=-714  wr=90%
+  Running [v10] x [hgp_crash_down] ...
+    done: mean=-1,442  p5=-26,298  wr=56%
+  Running [v10] x [hgp_crash_up] ...
+    done: mean=3,026  p5=-17,915  wr=76%
+  Running [v10] x [hgp_extreme_down] ...
+    done: mean=-6,837  p5=-49,316  wr=48%
+  Running [v10] x [hgp_no_reversion] ...
+    done: mean=-2,982  p5=-50,790  wr=68%
+  Running [v10] x [vfe_no_drift] ...
+    done: mean=6,339  p5=649  wr=96%
+  Running [v10] x [vfe_fast_drift] ...
+    done: mean=5,843  p5=-484  wr=94%
+  Running [v10] x [high_vol] ...
+    done: mean=5,684  p5=-1,567  wr=86%
+  Running [v10] x [wide_spread] ...
+    done: mean=4,937  p5=-513  wr=90%
+  Running [v10] x [thin_liquidity] ...
+    done: mean=5,204  p5=-1,050  wr=88%
+  Running [v10] x [spread_shock] ...
+    done: mean=4,512  p5=-2,377  wr=84%
+  Running [v10] x [full_stress] ...
+    done: mean=-352  p5=-31,258  wr=58%
+
+============================================================================================
+  R3 MONTE CARLO STRESS TEST ù 50 sims Î 1000 ticks (platform-scale)
+============================================================================================
+  Scenario                  SUB mean     SUB p5   SUB wr    V10 mean     V10 p5   V10 wr    Winner
+  ----------------------------------------------------------------------------------------
+  baseline                     4,253     -8,885     70%       5,593       -531     94%  V10 >>
+  platform_like                4,923     -6,953     82%       5,271       -714     90%  V10 >>
+  hgp_crash_down              -4,219    -20,059     34%      -1,442    -26,298     56%  V10 >> (**)
+  hgp_crash_up                -8,242    -26,303     20%       3,026    -17,915     76%  V10 >> (**)
+  hgp_extreme_down           -12,707    -40,317     26%      -6,837    -49,316     48%  V10 >> (**)
+  hgp_no_reversion           -17,920    -55,691     20%      -2,982    -50,790     68%  V10 >> (**)
+  vfe_no_drift                 3,962     -8,786     72%       6,339        649     96%  V10 >>
+  vfe_fast_drift               4,261     -8,845     72%       5,843       -484     94%  V10 >>
+  high_vol                    -3,464    -23,686     42%       5,684     -1,567     86%  V10 >>
+  wide_spread                  5,280     -5,879     70%       4,937       -513     90%  SUB >>
+  thin_liquidity               3,752     -7,844     76%       5,204     -1,050     88%  V10 >>
+  spread_shock                12,026     -8,319     86%       4,512     -2,377     84%  SUB >>
+  full_stress                 -2,606    -24,595     40%        -352    -31,258     58%  V10 >> (**)
+  ----------------------------------------------------------------------------------------
+
+  (**) = high-severity scenario
+
+  Scenario wins:  SUB=2  V10=11
+
+============================================================================================
+
+========================================================================
+  CRITICAL SCENARIO DETAIL (disaster/extreme cases)
+========================================================================
+
+  [SUBMISSION] Scenario: hgp_crash_down
+    Mean PnL :     -4,219   Std:   10,106
+    P5  PnL  :    -20,059   P95:   13,775
+    Win Rate : 34.0%   MaxDD p95:   29,066
+    Sharpe   : -0.233
+    HYDROGEL_PACK               : mean=  -7,419  p5= -20,804  maxPos_avg=159
+    VELVETFRUIT_EXTRACT         : mean=   3,200  p5=  -5,179  maxPos_avg=120
+
+  [V10] Scenario: hgp_crash_down
+    Mean PnL :     -1,442   Std:   12,157
+    P5  PnL  :    -26,298   P95:   11,439
+    Win Rate : 56.0%   MaxDD p95:   39,410
+    Sharpe   : 0.086
+    HYDROGEL_PACK               : mean=  -4,234  p5= -29,215  maxPos_avg=186
+    VELVETFRUIT_EXTRACT         : mean=   2,792  p5=  -2,928  maxPos_avg=158
+
+  [SUBMISSION] Scenario: hgp_extreme_down
+    Mean PnL :    -12,707   Std:   16,057
+    P5  PnL  :    -40,317   P95:    9,491
+    Win Rate : 26.0%   MaxDD p95:   49,335
+    Sharpe   : -0.521
+    HYDROGEL_PACK               : mean= -13,839  p5= -38,726  maxPos_avg=162
+    VELVETFRUIT_EXTRACT         : mean=   1,132  p5=  -6,051  maxPos_avg=123
+
+  [V10] Scenario: hgp_extreme_down
+    Mean PnL :     -6,837   Std:   19,870
+    P5  PnL  :    -49,316   P95:   14,493
+    Win Rate : 48.0%   MaxDD p95:   60,397
+    Sharpe   : -0.056
+    HYDROGEL_PACK               : mean=  -9,401  p5= -49,766  maxPos_avg=180
+    VELVETFRUIT_EXTRACT         : mean=   2,564  p5=  -4,540  maxPos_avg=156
+
+  [SUBMISSION] Scenario: hgp_no_reversion
+    Mean PnL :    -17,920   Std:   19,650
+    P5  PnL  :    -55,691   P95:    6,750
+    Win Rate : 20.0%   MaxDD p95:   61,163
+    Sharpe   : -0.733
+    HYDROGEL_PACK               : mean= -17,868  p5= -51,531  maxPos_avg=165
+    VELVETFRUIT_EXTRACT         : mean=     -52  p5=  -8,208  maxPos_avg=126
+
+  [V10] Scenario: hgp_no_reversion
+    Mean PnL :     -2,982   Std:   21,473
+    P5  PnL  :    -50,790   P95:   16,081
+    Win Rate : 68.0%   MaxDD p95:   59,006
+    Sharpe   : 0.114
+    HYDROGEL_PACK               : mean=  -5,565  p5= -53,807  maxPos_avg=175
+    VELVETFRUIT_EXTRACT         : mean=   2,583  p5=  -3,173  maxPos_avg=156
+
+  [SUBMISSION] Scenario: full_stress
+    Mean PnL :     -2,606   Std:   13,168
+    P5  PnL  :    -24,595   P95:   18,035
+    Win Rate : 40.0%   MaxDD p95:   38,136
+    Sharpe   : -0.097
+    HYDROGEL_PACK               : mean=  -4,976  p5= -24,735  maxPos_avg=156
+    VELVETFRUIT_EXTRACT         : mean=   2,369  p5=  -8,032  maxPos_avg=120
+
+  [V10] Scenario: full_stress
+    Mean PnL :       -352   Std:   14,249
+    P5  PnL  :    -31,258   P95:   18,390
+    Win Rate : 58.0%   MaxDD p95:   45,925
+    Sharpe   : 0.129
+    HYDROGEL_PACK               : mean=  -2,909  p5= -32,280  maxPos_avg=145
+    VELVETFRUIT_EXTRACT         : mean=   2,557  p5=  -5,948  maxPos_avg=140
+========================================================================

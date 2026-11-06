@@ -1,0 +1,33 @@
+# Local environment and editor folders
+/.*/
+__pycache__/
+
+# Other teams' public code used for research: not mine, don't republish
+previous-years/
+PREVIOUS_YEARS_ANALYSIS.md
+
+# Competition data, logs and scratch output
+round_data/
+backtester_data/
+logs/
+snapshots/
+backtests/
+archiver1r2/
+archiver3r4/
+_*.txt
+_*.json
+_*.err
+_q.py
+
+# Research notes synthesised from other teams' repos
+prosperity_cortex.py
+prosperity_cortex.xml
+PROSPERITY4_CONTEXT.md
+ROUND_BY_ROUND_GUIDE.md
+ROUND_START_PLAYBOOK.md
+
+# Derived competition data
+scripts/forensic_output/iv_panel.csv.gz
+
+# IMC game artwork
+AshFlowAlpha.jpg

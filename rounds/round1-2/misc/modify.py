@@ -1,0 +1,8 @@
+﻿f = open("submission.py", "r", encoding="utf-8")
+c = f.read()
+f.close()
+c = c.replace("soft_limit=50)", "soft_limit=70)", 1)
+c = c.replace("IPRStrategy(\"INTARIAN_PEPPER_ROOT\", position_limit=80, soft_limit=50)", "IPRStrategy(\"INTARIAN_PEPPER_ROOT\", position_limit=80, soft_limit=55)")
+f = open("submission.py", "w", encoding="utf-8")
+f.write(c)
+f.close()
